@@ -15,12 +15,14 @@
 
 ## 🔖 Quick Navigation
 
-- [👨‍💻 About Me](#-about-me)
-- [🎯 Repository Purpose](#-repository-purpose)
-- [🔎 Main Focus](#-main-focus)
-- [🗂️ Categories](#%EF%B8%8F-categories)
+- [👨‍💻 About Me](#about-me)
+- [🎯 Repository Purpose](#repository-purpose)
+- [🔎 Main Focus](#main-focus)
+- [🗂️ Categories](#categories)
 
 ---
+
+<a id="about-me"></a>
 
 ## 👨‍💻 About Me
 
@@ -38,6 +40,8 @@
 
 ---
 
+<a id="repository-purpose"></a>
+
 ## 🎯 Repository Purpose
 
 이 저장소의 목적:
@@ -49,6 +53,8 @@
 - ✅ 기술 포트폴리오로 활용 가능한 문서/코드 관리
 
 ---
+
+<a id="main-focus"></a>
 
 ## 🔎 Main Focus
 
@@ -63,6 +69,8 @@
 | 🤖 Automation | Python, Shell Script, Lambda 기반 운영 자동화 |
 
 ---
+
+<a id="categories"></a>
 
 ## 🗂️ Categories
 
