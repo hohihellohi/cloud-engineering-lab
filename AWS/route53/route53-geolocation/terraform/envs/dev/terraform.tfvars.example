@@ -1,0 +1,25 @@
+aws_region   = "us-east-1"
+root_domain  = "hohihellohi.com"
+record_name  = "geo.hohihellohi.com"
+ttl          = 30
+policy_name  = "geo-default-failover-hohihellohi-com"
+policy_comment = "Route53 geolocation + default failover test policy"
+
+endpoint_ips = {
+  # Use real public IPv4 addresses reachable from Route 53 health checkers.
+  kr                = "REPLACE_WITH_PUBLIC_IPV4_KR"
+  default_primary   = "REPLACE_WITH_PUBLIC_IPV4_DEFAULT_PRIMARY"
+  default_secondary = "REPLACE_WITH_PUBLIC_IPV4_DEFAULT_SECONDARY"
+}
+
+health_check_type              = "HTTP"
+health_check_port              = 80
+health_check_resource_path     = "/"
+health_check_failure_threshold = 3
+health_check_request_interval  = 30
+health_check_measure_latency   = false
+
+tags = {
+  Project = "route53-geolocation-failover-lab"
+  Env     = "dev"
+}
