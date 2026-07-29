@@ -1,5 +1,9 @@
 ﻿# Route 53 Geolocation 라우팅 Failover 테스트 정리
 
+> [홈](../../../README.md) / [AWS](../../README.md) / [Route 53](../README.md)
+>
+> 작성일: 2026-05-27 · 유형: 실습 기록 · 관련 코드: [Terraform](./terraform/)
+
 ## 테스트 목적
 Route 53에서 **Geolocation Routing** 사용 시 지역별 트래픽 분산과 장애 전환(Failover) 동작을 검증한다.
 특히 `대한민국(KR)` 레코드와 `기본값(Default)` 레코드의 장애 상황에서 실제 응답이 어떻게 달라지는지 확인한다.
