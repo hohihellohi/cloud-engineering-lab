@@ -42,6 +42,7 @@
 ├── AWS/
 │   ├── elb/
 │   │   └── alb-vpc-ipam/
+│   │       ├── assets/
 │   │       └── README.md
 │   └── route53/
 │       └── route53-geolocation/
