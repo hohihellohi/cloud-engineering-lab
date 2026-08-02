@@ -17,6 +17,7 @@
 
 | 작성일 | 카테고리 | 글 |
 |---|---|---|
+| 2026-08-02 | Troubleshooting / EC2 | [Secondary IP 미적용: ec2-net-utils의 IMDSv2 호환성](./Troubleshooting/ec2-secondary-ip-imdsv2-ec2-net-utils/) |
 | 2026-07-29 | Terraform / CLI | [Windows Git Bash에서 Terraform CLI 자동 완성 설정](./Terraform/cli/terraform-cli-autocomplete-windows-git-bash/) |
 | 2026-05-29 | Kubernetes / EKS | [Amazon EKS 버전 업그레이드 가이드](./Kubernetes/eks/eks-upgrade-guide/) |
 | 2026-05-27 | AWS / Route 53 | [Geolocation 라우팅 Failover 테스트](./AWS/route53/route53-geolocation/) |
@@ -33,7 +34,7 @@
 | [📈 Monitoring](./Monitoring/) | OpenTelemetry, Prometheus, Grafana, ClickHouse | 0 |
 | [🚀 CI/CD](./CI-CD/) | GitHub Actions, Jenkins, GitLab, Argo CD | 0 |
 | [🐧 Linux](./Linux/) | 시스템, 네트워크, 운영 명령어 | 0 |
-| [🩺 Troubleshooting](./Troubleshooting/) | 장애 분석, 원인 파악, 재발 방지 | 0 |
+| [🩺 Troubleshooting](./Troubleshooting/) | 장애 분석, 원인 파악, 재발 방지 | 1 |
 
 ## 저장소 구조
 
@@ -61,6 +62,8 @@
 ├── Monitoring/
 ├── OCI/
 ├── Troubleshooting/
+│   └── ec2-secondary-ip-imdsv2-ec2-net-utils/
+│       └── README.md
 └── README.md
 ```
 

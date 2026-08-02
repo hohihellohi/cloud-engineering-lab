@@ -6,4 +6,6 @@
 
 ## 게시글
 
-아직 등록된 글이 없습니다.
+| 영역 | 글 | 유형 |
+|---|---|---|
+| EC2 / Networking | [Secondary IP 미적용: ec2-net-utils의 IMDSv2 호환성](./ec2-secondary-ip-imdsv2-ec2-net-utils/) | 장애 분석 |
