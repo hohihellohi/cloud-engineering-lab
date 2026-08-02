@@ -20,12 +20,13 @@
 | 2026-07-29 | Terraform / CLI | [Windows Git Bash에서 Terraform CLI 자동 완성 설정](./Terraform/cli/terraform-cli-autocomplete-windows-git-bash/) |
 | 2026-05-29 | Kubernetes / EKS | [Amazon EKS 버전 업그레이드 가이드](./Kubernetes/eks/eks-upgrade-guide/) |
 | 2026-05-27 | AWS / Route 53 | [Geolocation 라우팅 Failover 테스트](./AWS/route53/route53-geolocation/) |
+| 2025-07-17 | AWS / ELB | [Application Load Balancer와 VPC IPAM으로 공인 IP 범위 제어하기](./AWS/elb/alb-vpc-ipam/) |
 
 ## 카테고리
 
 | 카테고리 | 주요 주제 | 글 |
 |---|---|---:|
-| [☁️ AWS](./AWS/) | 인프라 설계, 네트워크, 보안, 자동화 | 1 |
+| [☁️ AWS](./AWS/) | 인프라 설계, 네트워크, 보안, 자동화 | 2 |
 | [☸️ Kubernetes](./Kubernetes/) | EKS, OKE, 배포, 운영, 트러블슈팅 | 1 |
 | [🧱 Terraform](./Terraform/) | CLI, 모듈, 상태, 백엔드, 프로바이더 | 1 |
 | [🔶 OCI](./OCI/) | Compute, OKE, Network, File Storage | 0 |
@@ -39,6 +40,9 @@
 ```text
 .
 ├── AWS/
+│   ├── elb/
+│   │   └── alb-vpc-ipam/
+│   │       └── README.md
 │   └── route53/
 │       └── route53-geolocation/
 │           ├── README.md
