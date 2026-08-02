@@ -21,11 +21,11 @@ ALB와 Amazon VPC IP Address Manager(IPAM)를 통합하면 ALB가 사용할 공�
 
 ALB는 클라이언트 요청을 대상 그룹의 백엔드로 전달한다. 인터넷 연결 ALB의 각 노드는 ENI와 공인 IPv4 주소를 사용하며, 기본 구성에서는 AWS가 관리하는 지역 공용 IPv4 주소 풀에서 주소가 할당된다.
 
-![ALB와 IPAM 통합 구조](https://postfiles.pstatic.net/MjAyNTA3MTdfMjgw/MDAxNzUyNzU5OTk1NTY3.28fi43UHiiA9ZOuhJmNcQ4UZfJYzejH9nRt8llIh6BEg.mcfqPqZ34eWy0JhzSC8sOkAGtu8ALqNl95wbLyx0840g.PNG/image.png)
+<img src="https://postfiles.pstatic.net/MjAyNTA3MTdfMjgw/MDAxNzUyNzU5OTk1NTY3.28fi43UHiiA9ZOuhJmNcQ4UZfJYzejH9nRt8llIh6BEg.mcfqPqZ34eWy0JhzSC8sOkAGtu8ALqNl95wbLyx0840g.PNG/image.png" alt="ALB와 IPAM 통합 구조" width="100%">
 
 IPAM 공용 풀을 연결하면 ALB는 해당 풀의 공인 IPv4 주소를 우선 사용한다. 사용 중인 주소는 IPAM에서 할당 상태로 확인할 수 있고, 주소가 반환되면 다시 풀에서 사용할 수 있다.
 
-![IPAM 풀을 사용하는 ALB](https://postfiles.pstatic.net/MjAyNTA3MTdfODcg/MDAxNzUyNzYwMjM5ODY1.0tS_udydOTINHNwy9-9IFiBn1SzS_ZqQshaKWl_oXPsg.opA2JWD6GsdsvN9Jcy2Zh7llWlbevGUTtH4H-ifeKDAg.PNG/image.png)
+<img src="https://postfiles.pstatic.net/MjAyNTA3MTdfODcg/MDAxNzUyNzYwMjM5ODY1.0tS_udydOTINHNwy9-9IFiBn1SzS_ZqQshaKWl_oXPsg.opA2JWD6GsdsvN9Jcy2Zh7llWlbevGUTtH4H-ifeKDAg.PNG/image.png" alt="IPAM 풀을 사용하는 ALB" width="100%">
 
 ## ALB 스케일링 시 주의사항
 
@@ -59,7 +59,7 @@ VPC 콘솔에서 IPAM을 생성한다. 인터넷 연결 ALB가 사용할 공인 
 
 풀의 주소 패밀리를 `IPv4`, 범위를 `Public`, 로케일을 `ap-northeast-2`로 설정한 뒤 Amazon 제공 연속 공인 IPv4 CIDR 또는 BYOIP CIDR을 프로비저닝한다.
 
-![공용 CIDR 프로비저닝](https://postfiles.pstatic.net/MjAyNTA3MTdfMTU2/MDAxNzUyNzYwNDQzNjYw.UpN85vFwL5pHiQ3_lFhJZcDTln1gfw3X1nIyZ1QkVgAg.w0TolNL6jQLCDUgQ8g1k8dgz2QrL9_TfMhh73SsBbyUg.PNG/image.png)
+<img src="https://postfiles.pstatic.net/MjAyNTA3MTdfMTU2/MDAxNzUyNzYwNDQzNjYw.UpN85vFwL5pHiQ3_lFhJZcDTln1gfw3X1nIyZ1QkVgAg.w0TolNL6jQLCDUgQ8g1k8dgz2QrL9_TfMhh73SsBbyUg.PNG/image.png" alt="공용 CIDR 프로비저닝" width="100%">
 
 ### 프로비저닝 오류
 
@@ -76,7 +76,7 @@ in locale ap-northeast-2. Please check IPAM documentation to raise the limit.
 
 ALB 생성 화면의 네트워크 매핑에서 인터넷 연결 스킴과 IPv4 주소 유형을 선택한 뒤, 공용 IPv4 주소에 사용할 IPAM 풀을 지정한다.
 
-![ALB IPAM 풀 선택](https://postfiles.pstatic.net/MjAyNTA3MTdfOTYg/MDAxNzUyNzYwNTEyMjQ0.EL_R5C8RGRmgdM3AWDhtYvthZoTVwNQPhsI-2WQnrrYg.IKCbstKpib_t125NaV8HAPlmFgernRbR2MUItsUaMjkg.PNG/image.png)
+<img src="https://postfiles.pstatic.net/MjAyNTA3MTdfOTYg/MDAxNzUyNzYwNTEyMjQ0.EL_R5C8RGRmgdM3AWDhtYvthZoTVwNQPhsI-2WQnrrYg.IKCbstKpib_t125NaV8HAPlmFgernRbR2MUItsUaMjkg.PNG/image.png" alt="ALB IPAM 풀 선택" width="100%">
 
 보안 그룹과 대상 그룹을 구성하고 ALB를 생성한다. 대상 그룹은 실습용 백엔드에 맞게 구성했으며, ALB 노드와 공인 IP 개수는 대상 그룹 수가 아니라 활성화한 가용 영역과 ALB의 확장 상태에 따라 결정된다.
 
@@ -86,9 +86,9 @@ ALB 생성 화면의 네트워크 매핑에서 인터넷 연결 스킴과 IPv4 �
 
 ALB 생성 후 Elastic IP 주소와 IPAM 대시보드에서 할당 상태를 확인한다. ALB가 사용하는 주소에는 서비스 관리 속성이 표시되며 사용자가 직접 수정하거나 해제할 수 없다.
 
-![ALB 관리형 공인 IP 확인](https://postfiles.pstatic.net/MjAyNTA3MTdfMjMz/MDAxNzUyNzYwNTUwNjkz.9ZtKlOG5uIk3Np6_4IMEspMEE94__XIxOLyv2uJMQ6Ag.o9Z3GhnyQY07sj9Y_R1uAxDYmvcey3eYCHXm2DX9WHUg.PNG/image.png)
+<img src="https://postfiles.pstatic.net/MjAyNTA3MTdfMjMz/MDAxNzUyNzYwNTUwNjkz.9ZtKlOG5uIk3Np6_4IMEspMEE94__XIxOLyv2uJMQ6Ag.o9Z3GhnyQY07sj9Y_R1uAxDYmvcey3eYCHXm2DX9WHUg.PNG/image.png" alt="ALB 관리형 공인 IP 확인" width="100%">
 
-![IPAM 주소 할당 상태](https://postfiles.pstatic.net/MjAyNTA3MTdfMTIg/MDAxNzUyNzYwNTgwMTc5.hun5KlXnfPyAw9ckfC2VIMOhn6o4U-Me7qim9PzYWkEg.wJwvIPQ0Lx-Ag-amdohJxhRXaHJqQXVzMHvRgcFf__Ag.PNG/image.png)
+<img src="https://postfiles.pstatic.net/MjAyNTA3MTdfMTIg/MDAxNzUyNzYwNTgwMTc5.hun5KlXnfPyAw9ckfC2VIMOhn6o4U-Me7qim9PzYWkEg.wJwvIPQ0Lx-Ag-amdohJxhRXaHJqQXVzMHvRgcFf__Ag.PNG/image.png" alt="IPAM 주소 할당 상태" width="100%">
 
 ALB의 DNS 이름은 일반적으로 활성화된 가용 영역마다 하나의 ALB 노드 IP로 해석된다. 확장이나 교체 과정에서 개별 주소는 달라질 수 있지만, IPAM 풀에 여유가 있다면 지정한 CIDR 범위 안에서 주소가 할당된다.
 
